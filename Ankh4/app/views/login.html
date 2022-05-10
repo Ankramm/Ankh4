@@ -1,0 +1,23 @@
+{% extends "layouts/default.html" %}
+
+{% block body%}
+<div class="p-4 "><!--WRAPPER -->
+	{% include '/partials/header.html' %}
+	<main class="p-4 bg-slate-100 my-4 rounded-lg">
+	<form action="/login/process" method="POST" class="flex flex-col mx-auto w-1/4 m-auto">
+		<input name="email" type="email" placeholder="Email address" required class="rounded-lg mb-4 p-2">
+		<input name="password" type="password" placeholder="password" required class="rounded-lg mb-4 p-2">
+		<button class="bg-slate-300 p-2 rounded-lg uppercase">
+			Login 
+		</button>
+	</form>
+	<ul class="p-4 flex flex-col w-1/4 m-auto ">
+		<li class="ml-12"><a>Don't have an account?</a></li>
+		<li class="ml-24 rounded-lg text-sky-500"><a href="/register" class="pr-4  uppercase ">register!</a></li>
+	</ul>
+	
+	</main>
+	{% include '/partials/footer.html' %}
+</div><!--.WRAPPER -->
+	
+{% endblock %}

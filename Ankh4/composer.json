@@ -1,0 +1,21 @@
+{
+    "name": "ankh/ankh",
+    "description": "my simple Framework",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Ankh\\": "src/",
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "SD",
+            "email": "tareto007@yahoo.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "twig/twig": "^3.0"
+    }
+}

@@ -1,0 +1,19 @@
+<header class="p-4 bg-cyan-300 rounded-lg"><!-- HEADER -->
+	<nav class="p-1 bg-cyan-100 rounded-lg">
+		<ul class="p-1 rounded-lg flex flex-column justify-between">
+			<li class="rounded-lg">
+				<a href="/home" class="pl-2 text-xl">Exemple.com</a> 
+			</li>
+			<!-- This headerClear.html was maded without info 'About us and Lorem' for registration page, session['user_email'] schould did not working -->
+			<li>
+				{% if session['user_email']%}
+				<a href="/404" class="pr-6">{{ session['user_email'] }}</a>
+				<a href="/sessiond" class="pr-4">LogOut</a>
+				{% else %}
+				<a href="/login" class="pr-6">login</a>
+				<a href="/register" class="pr-4">Register</a>
+				{% endif %}
+			</li>
+		</ul>
+	</nav>
+</header><!-- .HEADER -->
